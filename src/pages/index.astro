@@ -1,5 +1,8 @@
 ---
+import Header from "../components/Header.astro";
 import "../styles/global.css";
+
+const pageTitle = "ホーム";
 ---
 
 <html lang="ja">
@@ -9,22 +12,10 @@ import "../styles/global.css";
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>あそびば</title>
+		<title>あそびば｜{pageTitle}</title>
 	</head>
 	<body>
-		<header>
-			<div class="container">
-				<h1><a href="index.html">あそびば</a></h1>
-				<nav>
-					<ul>
-						<li><a href="profile.html">プロフィール</a></li>
-						<li><a href="blog.html">ブログ</a></li>
-						<li><a href="games.html">ゲーム</a></li>
-						<li><a href="tools.html">ツール</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+		<Header />
 
 		<main>
 			<h1>ホーム</h1>

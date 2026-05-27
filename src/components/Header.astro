@@ -1,0 +1,78 @@
+---
+
+---
+
+<header>
+    <div class="container">
+        <h1><a href="index.html">あそびば</a></h1>
+        <nav>
+            <ul>
+                <li><a href="profile.html">プロフィール</a></li>
+                <li><a href="blog.html">ブログ</a></li>
+                <li><a href="games.html">ゲーム</a></li>
+                <li><a href="tools.html">ツール</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<style>
+    header {
+        background-color: black;
+        margin: 0px;
+    }
+
+    header div h1 a {
+        color: White;
+        text-decoration: none;
+        margin: 20px;
+    }
+
+    header .container {
+        display: flex;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+
+    header nav ul li {
+        list-style: none;
+        margin: 20px;
+    }
+
+    header nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    header nav ul li a:hover {
+        text-decoration: underline;
+    }
+
+    /* ==========================================
+   スマートフォン向けのレスポンシブスタイル
+   ========================================== */
+@media (max-width: 600px) {
+    
+    /* 1. ヘッダー内のタイトルとメニューを縦並びに変更 */
+    header .container {
+        flex-direction: column; /* 横並びから縦並びにする */
+        align-items: center;    /* 中央寄せ */
+        padding: 15px 0;
+    }
+
+    /* 2. メニュー全体の余白と配置を調整 */
+    header nav ul {
+        padding: 0;
+        margin: 15px 0 0 0;
+        justify-content: center;
+        flex-wrap: wrap;        /* 画面幅が極端に狭い場合は折り返す */
+    }
+
+    /* 3. メニュー項目の間の余白をスマホ用に縮小 */
+    header nav ul li {
+        margin: 8px 12px;       /* 上下8px、左右12pxに縮小 */
+    }
+}
+</style>
